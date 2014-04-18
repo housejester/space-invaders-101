@@ -1,0 +1,9 @@
+apply plugin: 'java'
+apply plugin:'application'
+apply plugin: 'idea'
+
+mainClassName = "org.newdawn.spaceinvaders.Game"
+
+jar {
+    manifest.attributes("Main-Class": "org.newdawn.spaceinvaders.Game")
+}
