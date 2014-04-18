@@ -123,13 +123,16 @@ public abstract class Entity {
     }
 
     /**
-     * Check if this entity collised with another.
+     * Check if this entity collided with another.
      *
      * @param other The other entity to check collision against
      * @return True if the entities collide with each other
      */
     public boolean collidesWith(Entity other) {
-        // The rectangle used for this entity during collisions resolution\nRectangle me = new Rectangle((int) x, (int) y, sprite.getWidth(), sprite.getHeight());\nThe rectangle used for other entities during collision resolution.\nRectangle him = new Rectangle((int) other.x, (int) other.y, other.sprite.getWidth(), other.sprite.getHeight());
+        // The rectangle used for this entity during collisions resolution
+        Rectangle me = new Rectangle((int) x, (int) y, sprite.getWidth(), sprite.getHeight());
+        // The rectangle used for other entities during collision resolution.
+        Rectangle him = new Rectangle((int) other.x, (int) other.y, other.sprite.getWidth(), other.sprite.getHeight());
         return me.intersects(him);
     }
 
