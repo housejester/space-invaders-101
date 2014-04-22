@@ -4,3 +4,6 @@ build/
 *.ipr
 *.iws
 *.class
+.classpath
+.project
+.settings/
